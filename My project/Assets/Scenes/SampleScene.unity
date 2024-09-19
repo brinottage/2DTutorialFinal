@@ -708,10 +708,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawnRate: 2
   quickEnemySpawnRate: 2
+  shootingShipSpawnRate: 2
   BASpawnRate: 2
   HealthSpawnRate: 2
   enemyPrefab: {fileID: 4153865604338903651, guid: a072b506fc0e643dc9ad12a6ad55d3a6, type: 3}
   quickEnemyPrefab: {fileID: 632963867661822101, guid: c3536593f05f446229b6fe9781e34ba0, type: 3}
+  shootingEnemyPrefab: {fileID: 3153560245816543583, guid: e1926206d116e4249b1589509a901324, type: 3}
   BulletAccelPrefab: {fileID: 2628117045598571577, guid: c1e36f98d00514b21adf1353e08f47a5, type: 3}
   healthPrefab: {fileID: 5040813640095210001, guid: 9003e479a402a47dbb636022396066fb, type: 3}
 --- !u!4 &1106374263

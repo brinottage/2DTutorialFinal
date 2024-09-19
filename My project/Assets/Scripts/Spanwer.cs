@@ -9,6 +9,8 @@ public class Spanwer : MonoBehaviour
 
     [SerializeField] float quickEnemySpawnRate = 2f;
 
+    [SerializeField] float shootingShipSpawnRate = 2f;
+
     [SerializeField] float BASpawnRate = 2f;
 
     [SerializeField] float HealthSpawnRate = 2f;
@@ -16,6 +18,8 @@ public class Spanwer : MonoBehaviour
     [SerializeField] GameObject enemyPrefab;
 
     [SerializeField] GameObject quickEnemyPrefab;
+
+    [SerializeField] GameObject shootingEnemyPrefab;
 
     [SerializeField] GameObject BulletAccelPrefab;
 
@@ -48,6 +52,8 @@ public class Spanwer : MonoBehaviour
         InvokeRepeating("SpawnHealth", 0, HealthSpawnRate);
 
         InvokeRepeating("SpawnQuickEnemy", 0, quickEnemySpawnRate);
+
+        InvokeRepeating("SpawnShootingShip", 0, shootingShipSpawnRate);
     }
 
     // Update is called once per frame
@@ -85,5 +91,12 @@ public class Spanwer : MonoBehaviour
         float randomX = Random.Range(xMin, xMax);
         // Spawns bullet accels above the top of the screen
         Instantiate(healthPrefab, new Vector3(randomX, ySpawn, 0), Quaternion.identity);
+    }
+
+    void SpawnShootingShip()
+    {
+        float randomX = Random.Range(xMin, xMax);
+        // Spawns bullet accels above the top of the screen
+        Instantiate(shootingEnemyPrefab, new Vector3(randomX, ySpawn, 0), Quaternion.identity);
     }
 }

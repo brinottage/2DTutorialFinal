@@ -35,4 +35,17 @@ public class Player : MonoBehaviour
         }
         
       }
+
+    void OnTriggerEnter2D(Collider2D collision) {
+
+        if (collision.gameObject.tag == "Player") {
+            GameManager.instance.DecreaseHealth(1);
+            Destroy(gameObject);
+        } else if (collision.gameObject.tag == "Barrier") {
+            Destroy(gameObject);
+
+        }
+
+    
+    }
 }
